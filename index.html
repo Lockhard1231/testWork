@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор коротких ссылок</title>
+</head>
+
+<body>
+    <h1>Генератор коротких ссылок</h1>
+    <input type="text" id="originalUrl" placeholder="Введите URL-адрес">
+    <button type="button" onclick="generateShortUrl()">Создать коротую ссылку</button>
+    <div id="shortUrl"></div>
+
+    <script>
+        document.getElementById('shortUrl').addEventListener('click', function (event) {
+            if (event.target && event.target.id === 'shortUrlLink') {
+                event.preventDefault();
+                const shortUrl = event.target.getAttribute('href');
+                redirectionURL(shortUrl);
+                // Optional: navigate programmatically
+                // window.location.href = event.target.href;
+            }
+        });
+    </script>
+</body>
+<script src="ajax-request.js"></script>
+
+</html>
