@@ -1,0 +1,58 @@
+body {
+    background: url('../img/backIMG.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 650px;
+    max-width: 100%;
+    height: 400px;
+    max-height: 100%;
+    background: white;
+    padding: 20px 0 0 0;
+
+}
+
+
+
+.inpForm{
+    display: flex;
+    align-items: center;
+}
+
+    
+
+.inpArea{
+    flex: 1;
+    font-size: 19px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid rgb(195, 195, 203);
+}
+
+.inpArea:focus {
+    outline: none; 
+}
+
+.genBut {
+    background: #3f6395;
+    color: white;
+    font-size: 11.5px;
+    font-weight: bold;
+    padding: 10px; 
+    border: none;
+}
+
+#shortUrl{
+    text-align: center;
+    height: 200px;
+    width: 100%;
+    background-color: rgb(230, 238, 238);
+}

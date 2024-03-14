@@ -4,17 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <title>Генератор коротких ссылок</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
 </head>
 
 <body>
-    <h1>Генератор коротких ссылок</h1>
-    <input type="text" id="originalUrl" placeholder="Введите URL-адрес">
-    <button type="button" onclick="generateShortUrl()">Создать коротую ссылку</button>
-    <div id="shortUrl"></div>
+    <div class="main">
+        <h1>Генератор коротких ссылок</h1>
+        <div class="inpForm">
+            <input class="inpArea" type="text" id="originalUrl" placeholder="Введите URL-адрес">
+            <button class="genBut" type="button" onclick="generateShortUrl()">СГЕНЕРИРОВАТЬ КОРОТКИЙ <br>URL-АДРЕС</button>
+        </div>
+        <div id="shortUrl"></div>
+    </div>
+
 </body>
 
 
-<script src="ajax-request.js"></script>
+<script src="js/ajax-request.js"></script>
 
 </html>
