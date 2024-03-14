@@ -15,22 +15,15 @@ function generateShortCode() {
     return $shortCode;
 }
 
-// Обрезает URL-адрес до основной части "http://domain/".
-$pattern = "/^(https?:\/\/[^\/]+?)\/.*/";
-$replacement = "$1/";
-$shortenURL = preg_replace($pattern, $replacement, $originalUrl);
-
 // Генерация уникального короткого кода
-$shortCode = $shortenURL.generateShortCode();
+$shortCode = generateShortCode();
 
 // Внесение данных в базу данных
-$query = $connect->prepare("INSERT INTO urls (original_url, short_url, validity) VALUES (?, ?, DATE_ADD(NOW(), INTERVAL 10 MINUTE))");
+$query = $connect->prepare("INSERT INTO urls (original_url, token, validity) VALUES (?, ?, DATE_ADD(NOW(), INTERVAL 1 MINUTE))");
 $query->execute([$originalUrl, $shortCode]);
 
-
-
 // Вывод короткой ссылки
-echo $shortCode;
+echo 'http://localhost/'.$shortCode;
 
 $connect = null;
 ?>
